@@ -4,7 +4,8 @@ with open("newfile.txt", "r") as f:
     f.close()
 together = []
 while c < len(together_old):
-    together.append(together_old[c].replace("\n", ""))
+    # together.append(together_old[c].replace("\n", ""))
+    together.append(together_old[c].replace("// measure " + str(c), "").replace("\n", "").strip())
     c += 1
 
 together_new = []
